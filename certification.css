@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:rgb(215, 215, 197);
+}
+
+.certificate-header{
+    font-size: 30px;
+    padding-top: 13px;
+}
+.certificate-header i {
+    font-size: 22px; /* Change the size of the icon */
+    margin-right: 5px; /* Space between the icon and text */
+}
+nav {
+    background-color: #333; /* Background color for the navigation */
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+nav li {
+    margin-right: 10px; /* Space between menu items */
+}
+
+nav a {
+    display: inline-block; /* Make the link a block for padding */
+    margin-left: -100px;
+    margin-top: -5px;
+    padding: 10px 15px; /* Padding around the text */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid white; /* White border */
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+    
+nav a:hover {
+    background-color: white; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+/* -----------------------certificate------------------ */
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with min width */
+    gap: 20px; /* Space between grid items */
+}
+
+.certificate {
+    height: 340px; /* Set the desired height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation on hover */
+}
+
+.certificate:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.certificate img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Responsive max width */
+    max-height: 80%; /* Responsive max height */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.info {
+    margin-top: 10px;
+}
+
+.date, .topic {
+    color: grey;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.date span, .topic span {
+    display: inline-block; /* Keeps the labels on the same line */
+}
+
+.topic {
+    position: relative;
+    margin: 5px 0; /* Margin for the topic */
+}
+
+.topic-2 {
+   position: absolute;
+    color: #565252; /* Dark grey for topic */
+    padding-left: 8px;
+}
+
+.date-2 {
+    display: block; /* Starts on a new line */
+    color: #565252; /* Dark grey for date */
+    padding-left: 8px; /* Small indent */
+}
+
+.view-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff004f; /* Bright button color */
+    color: white;
+    text-decoration: none;
+    margin-top: 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.view-button:hover {
+    background-color: #e60047; /* Slightly darker on hover */
+    transform: scale(1.05); /* Button zoom on hover */
+}
+
+
+@media only screen and (max-width:600px){
+
+    .certificate {
+        height: 370px; 
+    }
+    #certificate-1{
+        margin-top: 60px;
+    }
+    .view-button {
+        margin-top: 20px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        height: 45px;
+        
+    }
+
+    .certificate-header {
+        margin-left: 0; /* Remove left margin for certificate header */
+        
+    }
+}
+
+@media only screen and (max-width:768px){
+ 
+    .certificate {
+        height: 600px;
+    }
+    .view-button {
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width:820px){
+ 
+    .certificate {
+        height: 376px;
+        padding-bottom: 50px;
+    }
+    .view-button {
+        margin-top: 20px;
+        margin-bottom:40px;
+    }
+}
+@media only screen and (max-width:1024px){
+ 
+    .certificate {
+        height: 375px; 
+    }
+}
